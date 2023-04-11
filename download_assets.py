@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
-from urllib.request import urlretrieve
+from urllib import urlretrieve
 from zipfile import ZipFile
 
 ASSET_PACK_URL = 'http://vulkan.gpuinfo.org/downloads/vulkan_asset_pack_gltf.zip'
@@ -29,3 +29,5 @@ print("Extracting assets")
 zip = ZipFile(ASSET_PACK_FILE_NAME, 'r')
 zip.extractall("./")
 zip.close()
+
+print("Extracting finished")
